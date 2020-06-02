@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+  <title>Homepage Loop</title>
+  <meta name="author" content="Hanne Maes">
+  <!-- meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content=""-->
+</head>
+<body>
+  <script>
+    
+    // all possible URL to redirect to
+    var possibleHomepage = [
+      "https://calendar.google.com/calendar/r",
+      "https://cloud.blender.org/blog-archive/",
+    ]
+
+    // redirect to random from list
+    window.location.replace(possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)])
+
+  </script>
+</body>
+</html>
