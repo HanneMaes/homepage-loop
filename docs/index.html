@@ -19,7 +19,35 @@
   <!-- javascript -->
   <script src="script.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() { documentReady(); });
+    // all possible URL to redirect to
+    var possibleHomepage = [
+      "https://apod.nasa.gov/apod/astropix.html",
+      // blender
+      "https://cloud.blender.org/blog/",
+      "https://www.blender.org/news/",
+      "https://www.blender.org/about/user-stories/",
+      // nft & crypto art
+      "https://decrypt.co/"
+      "https://opensea.io/rankings",
+      "https://www.hicetnunc.xyz/",
+      "https://foundation.app/",
+      "https://superrare.com/",
+      "https://knownorigin.io/",
+      "https://niftygateway.com/",
+      "https://opensea.io/",
+      // async.art
+      "https://async.art/gallery",
+      "https://edition.async.art/",
+      // async.art comics
+      "https://async.art/art/master/0xb6dae651468e9593e4581705a09c10a76ac1e0c8-525",
+      "https://async.art/art/master/0xb6dae651468e9593e4581705a09c10a76ac1e0c8-967",
+      "https://async.art/art/master/0xb6dae651468e9593e4581705a09c10a76ac1e0c8-1773",
+    ]
+
+    // redirect to random from list
+    randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)]
+    window.location.replace(randomPage);
+    
   </script>
 
 </body>
