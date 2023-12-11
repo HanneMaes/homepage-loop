@@ -19,8 +19,11 @@
   <!-- javascript -->
   <script src="script.js"></script>
   <script>
-    // all possible URL to redirect to
-    var possibleHomepage = [
+
+  // 50% chance to get a random URL from 1 of 2 arrays
+  const randomZeroOrOne = Math.round(Math.random());
+  if (randomZeroOrOne == 0) {  
+    const possibleHomepage = [
       // blender
       "https://cloud.blender.org/blog/",
       "https://www.blender.org/news/",
@@ -55,14 +58,21 @@
       "https://www.facebook.com/",
       "https://outlook.live.com/mail/0/",
       "https://dnd.wizards.com/news/archive?category=news",
-    ]
-
-    // redirect to random from list
-    randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)]
-    //window.location.replace(randomPage);
-    window.location.replace("https://teia.art/feed/newobjkts");
+    ];
+  } else {
+    const possibleHomepage = [
+      // TEZ art
+      "https://teia.art/", // recent sales
+      "https://teia.art/feed/newobjkts", // new
+      "https://www.fxhash.xyz/",
+    ];
+  }
+    
+  // redirect to random from list
+  randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)];
+  //window.location.replace(randomPage);
+  window.location.replace("https://teia.art/feed/newobjkts");
 
   </script>
-
 </body>
 </html>
