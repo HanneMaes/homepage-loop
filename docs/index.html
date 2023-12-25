@@ -21,7 +21,8 @@
   <script>
 
   // 50% chance to get a random URL from 1 of 2 arrays
-  const randomZeroOrOne = Math.round(Math.random());
+  const randomZeroOrOne = Math.round(Math.random()); // console.log("randomZeroOrOne:", randomZeroOrOne);
+
   var possibleHomepage = [];
     
   if (randomZeroOrOne == 0) {  
@@ -69,11 +70,11 @@
       "https://www.fxhash.xyz/",
     ];
   }
-    
+  // console.log("possibleHomepage:", possibleHomepage);
+
   // redirect to random from list
-  randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)];
-  //window.location.replace(randomPage);
-  window.location.replace("https://teia.art/feed/newobjkts");
+  randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)]; // console.log("randomPage:", randomPage);
+  window.location.replace(randomPage);
 
   </script>
 </body>
