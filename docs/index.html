@@ -20,59 +20,52 @@
   <script src="script.js"></script>
   <script>
 
-  // 50% chance to get a random URL from 1 of 2 arrays
-  const randomZeroOrOne = Math.round(Math.random()); // console.log("randomZeroOrOne:", randomZeroOrOne);
-
+  // Choose a random category
+  const randomCategory = Math.floor(Math.random() * 5);
   var possibleHomepage = [];
     
-  if (randomZeroOrOne == 0) {  
+  if (randomCategory == 0) {  
     possibleHomepage = [
-      // blender
+      // Blender & Art
       "https://cloud.blender.org/blog/",
       "https://www.blender.org/news/",
       "https://www.blender.org/about/user-stories/",
       "https://blenderartists.org/",
-      // nft & crypto art
+      "https://teia.art",
+    ];
+  } else if (randomCategory == 1) {
+    possibleHomepage = [
+      // Crypto News
       "https://decrypt.co/",
-      "https://foundation.app/",
-      "https://superrare.com/",
-      "https://knownorigin.io/",
-      "https://niftygateway.com/",
-      "https://opensea.io/",
       "https://decrypt.co/scene",
-      "https://teia.art/objkt/856725",
-      // photography
+    ];
+  } else if (randomCategory == 2) {
+    possibleHomepage = [
+      // News & beurs
+      "https://www.demorgen.be/meningen/zak-cartoon-van-de-dag~b0de26ebb/",
+      "https://xkcd.com/",
+      "https://dnd.wizards.com/news/archive?category=news",
+    ];
+  } else if (randomCategory == 4) {
+    possibleHomepage = [
+      // Photography
       "https://www.instagram.com/colorpalette.cinema/",
-      // hackernoon
+      "https://www.lomography.com/homes/",
+    ];
+  } else if (randomCategory == 4) {
+    possibleHomepage = [
+      // Linux, tech & open-source
       "https://hackernoon.com/",
-      // linux & open-source
       "https://blog.zorin.com/",
       "https://asahilinux.org/blog/",
-      // open-source art
       "https://krita.org/en/?post_type=post&s=",
       "https://www.gimp.org/news/",
       "https://www.darktable.org/news/",
       "https://inkscape.org/news/",
-      // fairhpone
       "https://www.fairphone.com/nl/blog/",
       "https://lineageos.org/blog/",
-      // news
-      "https://www.demorgen.be/meningen/zak-cartoon-van-de-dag~b0de26ebb/",
-      // other
-      "https://xkcd.com/",
-      "https://www.facebook.com/",
-      "https://outlook.live.com/mail/0/",
-      "https://dnd.wizards.com/news/archive?category=news",
       "https://jekyllrb.com/news/",
       "https://blog.logseq.com/",
-    ];
-  } else {
-    possibleHomepage = [
-      // TEZ art
-      "https://teia.art/", // recent sales
-      "https://teia.art/feed/newobjkts", // new
-      // Photography
-      "https://www.lomography.com/homes/",
     ];
   }
   // console.log("possibleHomepage:", possibleHomepage);
