@@ -1,18 +1,6 @@
 <!doctype html>
 <head>
-  <title>Homepage Loop v2.1</title>
-  <meta name="author" content="Hanne Maes">
-  <!-- meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:image" content=""-->
-
-  <link rel="stylesheet" href="styles.css">
-
+  <title>Homepage Loop v3.0</title>
 </head>
 <body>
 
@@ -73,10 +61,14 @@
       "https://blog.logseq.com/",
     ];
   }
-  // console.log("possibleHomepage:", possibleHomepage);
+
+  // create debug message 
+  debugMsg = "possibleHomepage:\n" + possibleHomepage;
 
   // redirect to random from list
-  randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)]; // console.log("randomPage:", randomPage);
+  randomPage = possibleHomepage[Math.floor(Math.random() * possibleHomepage.length)]; 
+  debugMsg += "\n\nrandomPage:\n" + randomPage;
+  window.alert(debugMsg);
   window.location.replace(randomPage);
 
   </script>
